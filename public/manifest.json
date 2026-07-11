@@ -1,0 +1,16 @@
+{
+  "name": "CubeMaster",
+  "short_name": "CubeMaster",
+  "description": "An immersive 3D Rubik's Cube solving and learning application.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d12",
+  "theme_color": "#0d0d12",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
