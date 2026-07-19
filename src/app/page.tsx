@@ -10,6 +10,10 @@ const Cube = dynamic(() => import('@/components/Cube'), {
 });
 
 export default function Home() {
+  const dispatchAction = (action: string) => {
+    window.dispatchEvent(new CustomEvent('cube-action', { detail: action }));
+  };
+
   return (
     <div className="app-container">
       <Navigation />
@@ -20,10 +24,10 @@ export default function Home() {
         </div>
         
         <div className="controls-overlay glass-panel">
-          <button className="glass-button">Scramble</button>
-          <button className="glass-button">Solve</button>
-          <button className="glass-button">Step Back</button>
-          <button className="glass-button">Step Fwd</button>
+          <button className="glass-button" onClick={() => dispatchAction('SCRAMBLE')}>Scramble</button>
+          <button className="glass-button" onClick={() => dispatchAction('SOLVE')}>Solve</button>
+          <button className="glass-button" onClick={() => dispatchAction('UNDO')}>Step Back</button>
+          <button className="glass-button" onClick={() => dispatchAction('REDO')}>Step Fwd</button>
         </div>
       </main>
     </div>
